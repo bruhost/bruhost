@@ -1,0 +1,32 @@
+{
+  "name": "bruhost",
+  "version": "1.0.0",
+  "description": "A templating engine for creating new apps",
+  "homepage": "https://github.com/ItsRiprod/bruhost#readme",
+  "bugs": {
+    "url": "https://github.com/bruhost/bruhost/issues"
+  },
+  "bin": {
+    "bruhost": "scripts/dist/setup.cjs"
+  },
+  "scripts": {
+    "build": "esbuild scripts/src/setup.ts --bundle --platform=node --outfile=scripts/dist/setup.cjs --external:fs-extra --external:path --external:ejs --external:child_process"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruhost/bruhost.git"
+  },
+  "license": "ISC",
+  "author": "Yungrocket",
+  "type": "module",
+  "main": "dist/index.js",
+  "devDependencies": {
+    "@types/node": "^22.10.10",
+    "esbuild": "^0.24.2",
+    "inquirer": "^12.3.2"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "ora": "^8.1.1"
+  }
+}
