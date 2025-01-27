@@ -1,0 +1,38 @@
+{
+  "name": "create-bruhost",
+  "version": "0.8.1",
+  "description": "A templating engine for creating new apps",
+  "homepage": "https://github.com/bruhost/bruhost#readme",
+  "bugs": {
+    "url": "https://github.com/bruhost/bruhost/issues"
+  },
+  "bin": {
+    "create-bruhost": "dist/index.cjs"
+  },
+  "scripts": {
+    "build": "esbuild scripts/src/index.ts --bundle --platform=node --outfile=dist/index.cjs --external:ejs",
+    "start": "node dist/index.cjs",
+    "dev": "esbuild scripts/src/index.ts --bundle --platform=node --outfile=dist/index.cjs --external:ejs --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruhost/bruhost.git"
+  },
+  "license": "ISC",
+  "author": "Yungrocket",
+  "type": "module",
+  "main": "dist/index.js",
+  "devDependencies": {
+    "@inquirer/prompts": "^7.3.1",
+    "@types/chroma-js": "^3.1.1",
+    "@types/node": "^22.10.10",
+    "esbuild": "^0.24.2"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "chroma-js": "^3.1.2",
+    "firebase": "^11.2.0",
+    "fs-extra": "^11.3.0",
+    "ora": "^8.1.1"
+  }
+}
